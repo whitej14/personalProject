@@ -1,0 +1,268 @@
+ <html>
+<head>
+<title>Better Safe</title>
+<style>
+html, body
+{
+background-color: #00aeef;
+width: inherit;
+height: inherit;
+margin: 0;
+padding: 0;
+}
+
+#container
+{
+width: inherit;
+height: inherit;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
+border-style: solid;
+border-bottom: solid #00aeef;
+border-right: solid #00aeef;
+border-left: solid #00aeef;
+border-top: none;
+}
+
+h1.title
+{
+margin: 0;
+padding: 0;
+border: 2%;
+font-family: Bernard MT Condensed;
+font-size: 50px;
+}
+
+p.hname1
+{
+font-family: Times New Roman;
+font-size: 36px;
+font-weight: bold;
+position: absolute;
+top: 7%;
+left: 10%;
+}
+
+p.hname1body
+{
+font-family: Times New Roman;
+font-size: 30px;
+font-weight: bold;
+position: absolute;
+top: 14%;
+left: 10%;
+color: #acacac;
+}
+
+p.hname1end
+{
+width: 92%;
+height: 30px;
+border-bottom: solid 5px;
+font-size: 24px;
+font-weight: bold;
+text-align: right;
+position: absolute;
+top: 21%;
+background-image: url('img/phone.png');
+background-repeat: no-repeat;
+background-position: 8% 60%;
+}
+
+p.hname2
+{
+font-family: Times New Roman;
+font-size: 36px;
+font-weight: bold;
+position: absolute;
+top: 26%;
+left: 10%;
+}
+
+p.hname2body
+{
+font-family: Times New Roman;
+font-size: 30px;
+font-weight: bold;
+position: absolute;
+top: 34%;
+left: 10%;
+color: #acacac;
+}
+
+p.hname2end
+{
+width: 92%;
+height: 30px;
+border-bottom: solid 5px;
+font-size: 24px;
+font-weight: bold;
+text-align: right;
+position: absolute;
+top: 40%;
+background-image: url('img/phone.png');
+background-repeat: no-repeat;
+background-position: 8% 60%;
+}
+
+p.hname3
+{
+font-family: Times New Roman;
+font-size: 36px;
+font-weight: bold;
+position: absolute;
+top: 45%;
+left: 10%;
+}
+
+p.hname3body
+{
+font-family: Times New Roman;
+font-size: 30px;
+font-weight: bold;
+position: absolute;
+top: 53%;
+left: 10%;
+color: #acacac;
+}
+
+p.hname3end
+{
+width: 92%;
+height: 30px;
+border-bottom: solid 5px;
+font-size: 24px;
+font-weight: bold;
+text-align: right;
+position: absolute;
+top: 59%;
+background-image: url('img/phone.png');
+background-repeat: no-repeat;
+background-position: 8% 60%;
+}
+
+p.hname4
+{
+font-family: Times New Roman;
+font-size: 36px;
+font-weight: bold;
+position: absolute;
+top: 64%;
+left: 10%;
+}
+
+p.hname4body
+{
+font-family: Times New Roman;
+font-size: 30px;
+font-weight: bold;
+position: absolute;
+top: 72%;
+left: 10%;
+color: #acacac;
+}
+
+p.hname4end
+{
+width: 92%;
+height: 30px;
+border-bottom: solid 5px;
+font-size: 24px;
+font-weight: bold;
+text-align: right;
+position: absolute;
+top: 78%;
+background-image: url('img/phone.png');
+background-repeat: no-repeat;
+background-position: 8% 60%;
+}
+
+#contactsprof
+{
+width: inherit;
+height: 80%;
+margin: 0;
+padding: 0;
+background-color: #ffffff;
+border-style: solid;
+border-width: thick 25px;
+border-color: #00aeef;
+}
+
+
+#backbutton
+{
+width: 48%;
+height: 10%;
+margin: 0;
+padding: 0;
+background-color: #acacac;
+border-style: solid;
+border-width: thick 5 px;
+border-color: #00aeef;
+position: absolute;
+}
+
+#mapbutton
+{
+width: 48%;
+height: 10%;
+margin: 0;
+padding: 0;
+background-color: #acacac;
+border-style: solid;
+border-width: thick 5 px;
+border-color: #00aeef;
+position: absolute;
+top: 91%;
+right: 1%;
+}
+
+h1.backb
+{
+font-family: Bernard MT Condensed;
+font-size: 50px;
+position: absolute;
+bottom: -45%;
+left: 30%;
+}
+
+h1.mapb
+{
+font-family: Bernard MT Condensed;
+font-size: 50px;
+position: absolute;
+bottom: -45%;
+left: 35%;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+<h1 class="title"><center>Better Safe</center></h1>
+</div>
+
+<div id="contactsprof">
+{% set index = 0 %}
+{% for place in places %}
+<p  class= "hname{{ index + 1 }}"> {{ place['name'] }} </p>  
+<p class= "hname{{ index + 1 }}body" >{{ place['vicinity'] }}</p>
+<p class= "hname{{ index + 1 }}end" >{{ numbers[index] }}</p>
+{% set index = index + 1 %}
+{% endfor %}
+</div>
+
+<div id="backbutton">
+<h1 class="backb"><center>Back</center></h1>
+</div>
+
+<div id="mapbutton">
+<h1 class="mapb"><center>Map</center></h1>
+</div>
+</body>
+
+</html>
